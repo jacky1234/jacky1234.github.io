@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Rx相关文档  ReactiveX/RxJava-CH ReactiveX/RxJava-EN  Rx周边 （Android）  RxBinding RxPermission RxLifeCircle RxCache Sqlbrite Andorid-ReactiveLocation - Google Play Service api ReactiveNetwork RxDownload 支持多线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rxshare">
+<meta property="og:url" content="http://yoursite.com/2018/11/21/RxShare/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Rx相关文档  ReactiveX/RxJava-CH ReactiveX/RxJava-EN  Rx周边 （Android）  RxBinding RxPermission RxLifeCircle RxCache Sqlbrite Andorid-ReactiveLocation - Google Play Service api ReactiveNetwork RxDownload 支持多线">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-23T02:50:37.407Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rxshare">
+<meta name="twitter:description" content="Rx相关文档  ReactiveX/RxJava-CH ReactiveX/RxJava-EN  Rx周边 （Android）  RxBinding RxPermission RxLifeCircle RxCache Sqlbrite Andorid-ReactiveLocation - Google Play Service api ReactiveNetwork RxDownload 支持多线">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/21/RxShare/">
+
+
+
+
+
+  <title>Rxshare | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/RxShare/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Rxshare</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-21T09:57:37+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Rx相关文档</p>
+<ul>
+<li><a href="https://mcxiaoke.gitbooks.io/rxdocs/content/" target="_blank" rel="noopener">ReactiveX/RxJava-CH</a></li>
+<li><a href="http://reactivex.io/RxJava/javadoc/" target="_blank" rel="noopener">ReactiveX/RxJava-EN</a></li>
+</ul>
+<p>Rx周边 （Android）</p>
+<ul>
+<li><a href="https://github.com/JakeWharton/RxBinding" target="_blank" rel="noopener">RxBinding</a></li>
+<li><a href="https://github.com/tbruyelle/RxPermissions" target="_blank" rel="noopener">RxPermission</a></li>
+<li><a href="https://github.com/trello/RxLifecycle" target="_blank" rel="noopener">RxLifeCircle</a></li>
+<li><a href="https://github.com/VictorAlbertos/RxCache" target="_blank" rel="noopener">RxCache</a></li>
+<li><a href="https://github.com/squar/sqlbrite" target="_blank" rel="noopener">Sqlbrite</a></li>
+<li><a href="https://github.com/mcharmas/Anroid-ReactiveLocation" target="_blank" rel="noopener">Andorid-ReactiveLocation</a> - Google Play Service api</li>
+<li><a href="https://github.com/pwittchen/ReactiveNetWork" target="_blank" rel="noopener">ReactiveNetwork</a></li>
+<li><a href="https://gothub.com/ssseasonnn/RxDownload" target="_blank" rel="noopener">RxDownload</a> 支持多线程和断点续传</li>
+</ul>
+<a id="more"></a>
+<hr>
+<p>介绍：<br>“RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.”（一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的库）</p>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><h4 id="RxJava2的5中观察者模式"><a href="#RxJava2的5中观察者模式" class="headerlink" title="RxJava2的5中观察者模式"></a>RxJava2的5中观察者模式</h4><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observable#Observer</td>
+<td>能够发射0-n个数据，并以成功或错误时间终止</td>
+</tr>
+<tr>
+<td>Flowable#subscriber</td>
+<td>能够发射0-n个数据，并以成功或错误时间终止.支持背压，可以控制数据源发射的速度</td>
+</tr>
+<tr>
+<td>Single#SingleObserver</td>
+<td>只发射单个数据或错误事件</td>
+</tr>
+<tr>
+<td>Completable#CompletableObserver</td>
+<td>从来不发射数据，只处理onComplete和onError事件。可以看成Rx的runnbale</td>
+</tr>
+<tr>
+<td>Maybe#MaybeObserver</td>
+<td>能够发射0/1个数据，要么成功，要么失败。类似Optional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observable的使用场景：</strong></p>
+<ol>
+<li>一般处理最大不超过1000条数据，而且几乎不会出现内存溢出</li>
+<li>处理同步流</li>
+</ol>
+<p><strong>Flowable 较好的场景</strong></p>
+<ol>
+<li>处理以某种方式产生超过10KB的元素</li>
+<li>文件读取与分析</li>
+<li>读取数据库记录，也是一个阻塞和基于拉取模式</li>
+<li>网络I/O 流</li>
+<li>创建一个响应式非阻塞接口</li>
+</ol>
+<h4 id="RxJava2的背压策略"><a href="#RxJava2的背压策略" class="headerlink" title="RxJava2的背压策略"></a>RxJava2的背压策略</h4><p>link： <a href="https://www.jianshu.com/p/ceb48ed8719d" target="_blank" rel="noopener">Android RxJava ：图文详解 背压策略</a><br>默认队列大小为128.</p>
+<hr>
+<h4 id="Observable-分类"><a href="#Observable-分类" class="headerlink" title="Observable 分类"></a>Observable 分类</h4><p><strong>Hot Observable</strong></p>
+<ul>
+<li>无论有没有观察者,事件始终都在发生。与订阅者的关系是1:n的关系，可以与多个订阅者共享信息。</li>
+</ul>
+<p><strong>Cold Observable</strong></p>
+<ul>
+<li>只有观察者订阅了，才开始执行发射数据流，并且与订阅者是1:1的关系。当有多个不同订阅者，消息是完整重新完整发送的。 也就是说，事件是各自独立的。</li>
+</ul>
+<hr>
+<h3 id="Subject-和-Processor"><a href="#Subject-和-Processor" class="headerlink" title="Subject 和 Processor"></a>Subject 和 Processor</h3><p><code>public abstract class Subject&lt;T&gt; extends Observable&lt;T&gt; implements Observer&lt;T&gt;</code></p>
+<hr>
+<p><strong>分类</strong></p>
+<ul>
+<li><strong>PublishSubject</strong>。once an {@link Observer} has subscribed, emits all subsequently observed items to the<br>subscriber.</li>
+<li><strong>ReplaySubject</strong>。 Replays events to Observers.</li>
+<li><strong>AsyncSubject</strong>.    An Subject that emits the very last value followed by a completion event or the received error to Observers.</li>
+<li><strong>BehaviorSubject</strong>.  Subject that emits the most recent item it has observed and all subsequent observed items to each subscribed</li>
+</ul>
+<h5 id="Processor"><a href="#Processor" class="headerlink" title="Processor"></a>Processor</h5><p>能够支持背压，这是其与Subject的最大区别。</p>
+<h3 id="线程调度"><a href="#线程调度" class="headerlink" title="线程调度"></a>线程调度</h3><p>Scheduler 是Rxjava对线程控制器的一个抽象.</p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>参照上述官方文档，已经非常详细了</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/12/Database/" rel="next" title="Android DB">
+                <i class="fa fa-chevron-left"></i> Android DB
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/23/github阅读/" rel="prev" title="Github">
+                Github <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建"><span class="nav-number">1.</span> <span class="nav-text">创建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RxJava2的5中观察者模式"><span class="nav-number">1.1.</span> <span class="nav-text">RxJava2的5中观察者模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RxJava2的背压策略"><span class="nav-number">1.2.</span> <span class="nav-text">RxJava2的背压策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Observable-分类"><span class="nav-number">1.3.</span> <span class="nav-text">Observable 分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Subject-和-Processor"><span class="nav-number">2.</span> <span class="nav-text">Subject 和 Processor</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Processor"><span class="nav-number">2.0.1.</span> <span class="nav-text">Processor</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#线程调度"><span class="nav-number">3.</span> <span class="nav-text">线程调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作符"><span class="nav-number">4.</span> <span class="nav-text">操作符</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
